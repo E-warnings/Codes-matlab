@@ -49,11 +49,11 @@ function [HDDs] = localisation(HDD,v,d) % vitesse de propagation des ondes en mm
             iloc=iloc+1;
         end;
     end;
-    figure();
-    plot(local_1(:,2),local_1(:,5),'r.');
-    figure();
-    plot(local_2(:,2),local_2(:,5),'b.');
-    
+%     figure();
+%     plot(local_1(:,2),local_1(:,5),'r.');
+%     figure();
+%     plot(local_2(:,2),local_2(:,5),'b.');
+%     
     % Enregistrement dans HDD
     HDDs = HDD;
     loca = sort([local_1; local_2],1);
