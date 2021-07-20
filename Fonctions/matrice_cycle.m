@@ -9,9 +9,9 @@ function [Cycle] = matrice_cycle(TDD,fc)
     Cycle(i,1) = 1;
     Cycle(i,2) = TDD.Time(x); 
 
-    while (x+11*f/10) <= len(1) 
-       [m, xm] = min(TDD.PARA1((x+8*f/10):(x+11*f/10)));   
-       x = x+xm+8*f/10-1;
+    while (x+fix(11*f/10)) <= len(1) 
+       [m, xm] = min(TDD.PARA1((x+fix(8*f/10)):(x+fix(11*f/10))));   
+       x = x+xm+fix(8*f/10)-1;
        i = i+1;
        Cycle(i,1) = Cycle(i-1)+1;
        Cycle(i,2) = TDD.Time(x); 
